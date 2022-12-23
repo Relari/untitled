@@ -9,7 +9,7 @@ public class AccionesInterfaceImpl implements AccionesInterface {
 
     @Override
     public void agregar(Perro perro) {
-
+        System.out.println("El perro ha sido agregado bajo el ID -> " + perro.getId());
     }
 
     @Override
