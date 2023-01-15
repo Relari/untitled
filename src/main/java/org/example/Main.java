@@ -1,113 +1,83 @@
 package org.example;
 
-import javax.swing.DefaultDesktopManager;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
-    public static final Perro PERRO = new Perro(1315, "Zeus", "Masculino");
-
-    public static final String MESSAGE = "Saludo";
-
     public static void main(String[] args) {
 
-//        String primer_nombre = "";
-//
-//        int numeroInteres = 123;
-//        numeroInteres = 2;
-//
-//        System.out.println(MESSAGE);
-//
-//        String message = "Hello World";
-//        String mensaje = "";
-//
-//        System.out.println(message);
-//
-//        message = "My first Class";
-//
-//        System.out.println(message);
-//
-//        System.out.println("------------------Numeros----------------");
-//
-//        System.out.println(Integer.MAX_VALUE);
-//        System.out.println(Long.MAX_VALUE);
-//
-//        System.out.println("-------------Decimales---------------------");
-//
-//        System.out.println(Float.MAX_VALUE);
-//        System.out.println(Double.MAX_VALUE);
-//        MESSAGE = "asdas";
-//
-//        String texto = "Texto normal";
-//
-//        var textoConVar = "";
-//
-//        DefaultDesktopManager defaultDesktopManager = new DefaultDesktopManager();
-//        var defaultDesktopManager = new DefaultDesktopManager();
-//
-//        String calcular = "asdasd";
-//
-//        if (calcular.equals(MESSAGE)) {
-//            System.out.println("Es igual a la condicional");
+//        int numero = 100;
+//        String texto = "Hello World";
+//        boolean estado = false;
+//        double decimal = 9.99;
+
+//        if (/*Condicion*/ estado) { // Resultado va verdadero o falso (true and false)
+//            // Si la condicion es verdadera
+//            System.out.println("El estado es verdadero");
 //        } else {
-//            System.err.println("No es igual a la condicional");
-//        }
-//
-//        System.out.println("fin proceso");
-//
-//        List<String> names = new ArrayList<>();
-//
-//        if (names.isEmpty()) {
-//            // ...
+//            // Si la condicion es falsa
+//            System.err.println("El estado es falso");
 //        }
 
-//        String texto = "";
-//        String textoNulo = null;
-
-//        List<String> names = null;
-//        System.out.println(names);
-//
-//        List<Perro> perros = new ArrayList<>();
-//
-//        for (int i = 0; i < perros.size(); i++) {
-//            if (perros.get(i).getGender().equals("M")) {
-//                System.out.println(perros.get(i));
-//            }
-//        }
-//
-//        for (Perro perro: perros) {
-//            if (perro.getGender().equals("F")) {
-//                System.out.println(perro);
-//            }
-//        }
-
-//        System.out.println(names2);
-//
-//        if (names2.isEmpty()) {
-//            System.out.println("La lista esta vacia");
-//        }
-
-//        if (texto.equals("A")) {
-//            // ...
-//        } else if (texto.equals("B")) {
-//            // ...
+//        if (numero > 200) {
+//            System.out.println("EL numero es mayor que 200");
+//        } else if (numero > 100) {
+//            System.out.println("El numero es mayor que 100");
 //        } else {
-//            // ...
+//            System.err.println("El numero es menor que 100");
 //        }
-//
-//        switch (texto) {
-//            case "A":
+
+//        switch (numero) {
+//            case 100:
+//                System.out.println("Escogiste la opcion 100");
 //                break;
-//            case "B":
+//            case 200:
+//                System.out.println("Escogiste la opcion 200");
 //                break;
 //            default:
+//                System.out.println("Opcion Invalida");
 //                break;
 //        }
+//
+//        System.out.println(numero > 100);
 
-        AccionesInterface accionesInterface = new AccionesInterfaceImpl();
-        accionesInterface.imprimir(PERRO);
+        List<String> names = new ArrayList<>(); // Trae una lista de valores.
+//        Set<String> names = new HashSet<>(); // Trae una lista de valores quitando duplicados.
+        names.add("Renzo");
+        names.add("Cristopher");
+        names.add("Karen");
+        names.add("Mercedes");
+        names.add("Karen");
 
+        System.out.println(names);
+
+//        for (int i = 0; i < names.size(); i++) {
+//            if (!names.get(i).equals("Mercedes")) {
+//                System.out.println(names.get(i));
+//            }
+//        }
+
+//        for (String name : names) {
+//            if (name.equals("Daniel") || name.equals("Maria")) {
+//                System.out.println(name);
+//            }
+//        }
+
+        List<String> namesInvalids = new ArrayList<>();
+        namesInvalids.add("Renzo");
+        namesInvalids.add("Karen");
+
+//        for (String name : names) {
+//            if (!namesInvalids.contains(name)) {
+//                System.out.println(name);
+//            }
+//        }
+
+        Map<Integer, List<String>> registro = new HashMap<>();
+        registro.put(1, names);
+        registro.put(2, namesInvalids);
+
+        System.out.println(registro.get(1));
 
     }
 }

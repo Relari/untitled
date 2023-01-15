@@ -1,24 +1,31 @@
-package org.example;
+package org.example.model;
 
+// Clase o Plantilla (Representacion de algo)
 public class Perro {
 
+    // Atributos.
+
+    private Integer id;
+    private String name;
+    private String gender;
+
+    // Constructor sin Parametros
     public Perro() {
     }
 
+    // Constructor con Parametros
     public Perro(Integer id, String name, String gender) {
         this.id = id;
         this.name = name;
         this.gender = gender;
     }
 
-    private Integer id;
-    private String name;
-    private String gender;
-
+    // Metodo GET sirve para obtener la informacion que se tiene almacenada
     public Integer getId() {
         return id;
     }
 
+    // Metodo SET sirve para asignar informacion al atributo
     public void setId(Integer id) {
         this.id = id;
     }
@@ -39,6 +46,7 @@ public class Perro {
         this.gender = gender;
     }
 
+    // Obtener la informacion que tiene el objeto
     @Override
     public String toString() {
         return "Perro{" +
@@ -46,19 +54,6 @@ public class Perro {
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        Perro doggie = new Perro(1315, "Zeus", "Masculino");
-
-        Perro doggie1 = new Perro();
-        doggie1.setId(1315);
-        doggie1.setName("Zeus");
-        doggie1.setGender("Masculino");
-
-
-        System.out.println("EL perro tiene el ID " + doggie.getId());
-
     }
 
 }
