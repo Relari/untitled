@@ -49,6 +49,7 @@ public class PerroApplication {
         }
 
         PerroRegistro perroRegistro = new PerroRegistroImpl();
+//        PerroRegistro perroRegistro = PerroRegistroImpl.getInstance();
 
         // Agregando a los perros
         perroRegistro.agregar(zeus);

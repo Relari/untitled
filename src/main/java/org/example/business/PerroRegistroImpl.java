@@ -7,6 +7,20 @@ import java.util.List;
 
 public class PerroRegistroImpl implements PerroRegistro {
 
+    /**
+     * Patron Singleton
+     */
+    private static PerroRegistro perroRegistro = null;
+
+    public static PerroRegistro getInstance() {
+        if (perroRegistro == null) {
+            System.out.println("Creando instancia.");
+            perroRegistro = new PerroRegistroImpl();
+        }
+        System.out.println("Retornando instancia existente.");
+        return perroRegistro;
+    }
+
     private final List<Perro> perros = new ArrayList<>();
 
     @Override
